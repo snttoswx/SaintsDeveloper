@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Defender - Jogo Espacial</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="galacticdefender.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Painel de Doação -->
+    <div id="donationPanel" class="donation-panel">
+        <div class="donation-content">
+            <div class="donation-header">
+                <h3>Apoie o saints a fazer mais joguinhos de navegador</h3>
+                <button id="closeDonation" class="donation-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="donation-body">
+                <div class="donation-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <p class="donation-text">
+                    Gostou do Galactic? apoie o criador abaixo!
+                </p>
+                <div class="donation-code">
+                    <span class="code-label">Pix GG:</span>
+                    <span class="code-value">pixgg.com/snttoswx</span>
+                    <button class="copy-btn" data-code="pixgg.com/snttoswx">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <button class="btn btn-primary" id="donateLater">
+                    Talvez mais tarde
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active" data-page="home">
+                    <i class="fas fa-home"></i>
+                    <span>Início</span>
+                </a>
+                <a href="#game" class="nav-link" data-page="game">
+                    <i class="fas fa-gamepad"></i>
+                    <span>Jogar</span>
+                </a>
+                <a href="#skins" class="nav-link" data-page="skins">
+                    <i class="fas fa-palette"></i>
+                    <span>Skins</span>
+                </a>
+                <a href="#ranking" class="nav-link" data-page="ranking">
+                    <i class="fas fa-trophy"></i>
+                    <span>Ranking</span>
+                </a>
+                <a href="#missions" class="nav-link" data-page="missions">
+                    <i class="fas fa-tasks"></i>
+                    <span>Missões</span>
+                </a>
+                <a href="#skills" class="nav-link" data-page="skills">
+                    <i class="fas fa-star"></i>
+                    <span>Habilidades</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-rocket"></i>
+                        <span>JOGO ESPACIAL PREMIUM</span>
+                    </div>
+                    <h1 class="hero-title">
+                        GALACTIC <span class="highlight">DEFENDER</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Defenda a galáxia contra a invasão alienígena em uma aventura espacial épica! 
+                        Melhore sua nave, desbloqueie skins exclusivas e domine o ranking universal.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-large" data-page="game">
+                            <i class="fas fa-play"></i>
+                            JOGAR AGORA
+                        </button>
+                        <button class="btn btn-secondary btn-large" data-page="skins">
+                            <i class="fas fa-palette"></i>
+                            VER SKINS
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="section-container">
+                    <div class="section-header">
+                        <div class="section-tag">RECURSOS EXCLUSIVOS</div>
+                        <h2 class="section-title">Por que jogar Galactic Defender?</h2>
+                        <p class="section-description">
+                            Descubra todas as incríveis funcionalidades que tornam este jogo único
+                        </p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-space-shuttle"></i>
+                            </div>
+                            <h3 class="feature-title">Naves Customizáveis</h3>
+                            <p class="feature-description">
+                                15 skins exclusivas para personalizar sua nave espacial
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="feature-title">Sistema de Ranking</h3>
+                            <p class="feature-description">
+                                Compita com jogadores de todo o mundo e suba no ranking
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h3 class="feature-title">Missões Diárias</h3>
+                            <p class="feature-description">
+                                Complete missões diárias e ganhe recompensas especiais
+                            </p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <h3 class="feature-title">Árvore de Habilidades</h3>
+                            <p class="feature-description">
+                                Desbloqueie poderes especiais e melhore suas habilidades
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sobre Section -->
+            <section id="sobre" class="sobre-section">
+                <div class="section-container">
+                    <div class="section-header">
+                        <div class="section-tag">DESENVOLVEDOR DO SITE</div>
+                        <h2 class="section-title">Começando agora na progamação</h2>
+                        <p class="section-description">Veja meu git hub!</p>
+                    </div>
+                    <div class="staff-grid">
+                        <div class="staff-member">
+                            <div class="staff-avatar">
+                                <img src="saints.jpeg" alt="snttoswx" class="staff-avatar-img">
+                            </div>
+                            <h3 class="staff-name">snttoswx</h3>
+                            <p class="staff-role">Fundador & Bom com IA</p>
+                            <div class="staff-social">
+                                <a href="https://github.com/snttoswx/Meu-Portf-lio" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Game Page -->
+        <section id="game" class="page">
+            <div class="game-container">
+                <div class="game-header">
+                    <h1>GALACTIC DEFENDER</h1>
+                    <p>Use as setas para mover e ESPAÇO para atirar | Toque na tela para mobile</p>
+                </div>
+                <div class="game-wrapper">
+                    <div class="game-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Pontuação</span>
+                            <span class="stat-value" id="score">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Vidas</span>
+                            <span class="stat-value" id="lives">3</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Nível</span>
+                            <span class="stat-value" id="level">1</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Recorde</span>
+                            <span class="stat-value" id="highScore">0</span>
+                        </div>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="gameCanvas" width="800" height="600"></canvas>
+                        <div class="mobile-controls">
+                            <div class="control-row">
+                                <button class="mobile-btn" id="upBtn">
+                                    <i class="fas fa-arrow-up"></i>
+                                </button>
+                            </div>
+                            <div class="control-row">
+                                <button class="mobile-btn" id="leftBtn">
+                                    <i class="fas fa-arrow-left"></i>
+                                </button>
+                                <button class="mobile-btn" id="shootBtn">
+                                    <i class="fas fa-bullseye"></i>
+                                </button>
+                                <button class="mobile-btn" id="rightBtn">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div class="control-row">
+                                <button class="mobile-btn" id="downBtn">
+                                    <i class="fas fa-arrow-down"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="game-controls">
+                        <button id="startBtn" class="btn btn-primary">
+                            <i class="fas fa-play"></i>
+                            Iniciar
+                        </button>
+                        <button id="pauseBtn" class="btn btn-secondary">
+                            <i class="fas fa-pause"></i>
+                            Pausar
+                        </button>
+                        <button id="skinBtn" class="btn btn-outline" data-page="skins">
+                            <i class="fas fa-palette"></i>
+                            Skins
+                        </button>
+                        <button id="allyBtn" class="btn btn-outline">
+                            <i class="fas fa-robot"></i>
+                            Aliados
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skins Page -->
+        <section id="skins" class="page">
+            <div class="section-container">
+                <div class="page-header">
+                    <h1>ESCOLHA SUA SKIN</h1>
+                    <p>Desbloqueie skins exclusivas conforme seu progresso no jogo</p>
+                </div>
+                
+                <div class="skins-container">
+                    <div class="skins-grid" id="skinsGrid">
+                        <!-- Skins serão carregadas via JavaScript -->
+                    </div>
+                    
+                    <div class="skin-preview">
+                        <div class="preview-header">
+                            <h3 id="selectedSkinName">Nave Estelar</h3>
+                            <span class="skin-status" id="skinStatus">DESBLOQUEADA</span>
+                        </div>
+                        <div class="preview-canvas">
+                            <canvas id="skinPreview" width="200" height="150"></canvas>
+                        </div>
+                        <div class="skin-info">
+                            <div class="info-item">
+                                <span class="info-label">Requisito:</span>
+                                <span class="info-value" id="skinRequirement">Recorde: 0 pontos</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Status:</span>
+                                <span class="info-value" id="skinProgress">Desbloqueada</span>
+                            </div>
+                        </div>
+                        <button id="equipSkinBtn" class="btn btn-primary">
+                            <i class="fas fa-check"></i>
+                            Equipar Skin
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Missions Page -->
+        <section id="missions" class="page">
+            <div class="section-container">
+                <div class="page-header">
+                    <h1>MISSÕES DIÁRIAS</h1>
+                    <p>Complete missões para ganhar recompensas especiais</p>
+                </div>
+                
+                <div class="missions-container">
+                    <div class="missions-stats">
+                        <div class="mission-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-day"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="completedMissions">0</div>
+                                <div class="stat-label">Missões Concluídas</div>
+                            </div>
+                        </div>
+                        <div class="mission-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-coins"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="celestialCoins">0</div>
+                                <div class="stat-label">Moedas Celestiais</div>
+                            </div>
+                        </div>
+                        <div class="mission-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="achievementPoints">0</div>
+                                <div class="stat-label">Pontos de Conquista</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="missions-list" id="missionsList">
+                        <!-- Missões serão carregadas via JavaScript -->
+                    </div>
+                    
+                    <div class="weekly-event">
+                        <div class="event-header">
+                            <h3>Evento Cósmico da Semana</h3>
+                            <span class="event-timer" id="eventTimer">7d 00:00:00</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-icon">
+                                <i class="fas fa-meteor"></i>
+                            </div>
+                            <div class="event-info">
+                                <h4>Chuva de Meteoros</h4>
+                                <p>Destrua meteoros especiais para ganhar recompensas duplas!</p>
+                                <div class="event-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" id="eventProgress"></div>
+                                    </div>
+                                    <span class="progress-text">0/20 Meteoros</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Page -->
+        <section id="skills" class="page">
+            <div class="section-container">
+                <div class="page-header">
+                    <h1>ÁRVORE DE HABILIDADES</h1>
+                    <p>Desbloqueie poderes espirituais e melhore suas capacidades</p>
+                </div>
+                
+                <div class="skills-container">
+                    <div class="skills-tree">
+                        <div class="skill-category">
+                            <h3>Escudos Divinos</h3>
+                            <div class="skills-grid">
+                                <div class="skill-card" data-skill="escudo-luz">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h4>Escudo da Luz</h4>
+                                    <p>Proteção divina que bloqueia danos</p>
+                                    <div class="skill-cost">
+                                        <i class="fas fa-coins"></i> 500
+                                    </div>
+                                    <button class="btn btn-outline unlock-skill">Desbloquear</button>
+                                </div>
+                                <div class="skill-card" data-skill="aura-sagrada">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-circle"></i>
+                                    </div>
+                                    <h4>Aura Sagrada</h4>
+                                    <p>Campo de força que destrói asteroides próximos</p>
+                                    <div class="skill-cost">
+                                        <i class="fas fa-coins"></i> 1000
+                                    </div>
+                                    <button class="btn btn-outline unlock-skill">Desbloquear</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3>Propulsão Celestial</h3>
+                            <div class="skills-grid">
+                                <div class="skill-card" data-skill="velocidade-luz">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <h4>Velocidade da Luz</h4>
+                                    <p>Aumenta a velocidade da nave em 50%</p>
+                                    <div class="skill-cost">
+                                        <i class="fas fa-coins"></i> 800
+                                    </div>
+                                    <button class="btn btn-outline unlock-skill">Desbloquear</button>
+                                </div>
+                                <div class="skill-card" data-skill="teletransporte">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-random"></i>
+                                    </div>
+                                    <h4>Teletransporte</h4>
+                                    <p>Teleporta a nave para qualquer posição</p>
+                                    <div class="skill-cost">
+                                        <i class="fas fa-coins"></i> 1500
+                                    </div>
+                                    <button class="btn btn-outline unlock-skill">Desbloquear</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3>Armas Espirituais</h3>
+                            <div class="skills-grid">
+                                <div class="skill-card" data-skill="raio-cosmico">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-bahai"></i>
+                                    </div>
+                                    <h4>Raio Cósmico</h4>
+                                    <p>Dispara um raio que atravessa múltiplos alvos</p>
+                                    <div class="skill-cost">
+                                        <i class="fas fa-coins"></i> 1200
+                                    </div>
+                                    <button class="btn btn-outline unlock-skill">Desbloquear</button>
+                                </div>
+                                <div class="skill-card" data-skill="explosao-solar">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-sun"></i>
+                                    </div>
+                                    <h4>Explosão Solar</h4>
+                                    <p>Destrói todos os asteroides na tela</p>
+                                    <div class="skill-cost">
+                                        <i class="fas fa-coins"></i> 2000
+                                    </div>
+                                    <button class="btn btn-outline unlock-skill">Desbloquear</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-info">
+                        <div class="skills-stats">
+                            <h3>Suas Habilidades</h3>
+                            <div class="active-skills" id="activeSkills">
+                                <!-- Habilidades ativas serão carregadas aqui -->
+                            </div>
+                        </div>
+                        <div class="skills-progress">
+                            <h3>Progresso Espiritual</h3>
+                            <div class="progress-item">
+                                <span class="progress-label">Nível de Iluminação</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 30%"></div>
+                                </div>
+                                <span class="progress-value">30%</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-label">Força Interior</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%"></div>
+                                </div>
+                                <span class="progress-value">45%</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-label">Concentração Cósmica</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 20%"></div>
+                                </div>
+                                <span class="progress-value">20%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ranking Page -->
+        <section id="ranking" class="page">
+            <div class="section-container">
+                <div class="page-header">
+                    <h1>RANKING GLOBAL</h1>
+                    <p>Compare sua pontuação com jogadores de todo o mundo</p>
+                </div>
+                
+                <div class="ranking-container">
+                    <div class="ranking-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="userRank">-</div>
+                                <div class="stat-label">Sua Posição</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="userScore">0</div>
+                                <div class="stat-label">Seu Recorde</div>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="stat-info">
+                                <div class="stat-number" id="totalPlayers">0</div>
+                                <div class="stat-label">Jogadores</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="ranking-list">
+                        <div class="ranking-header">
+                            <h3>TOP JOGADORES</h3>
+                            <div class="ranking-filters">
+                                <button class="filter-btn active" data-filter="global">Global</button>
+                                <button class="filter-btn" data-filter="monthly">Este Mês</button>
+                                <button class="filter-btn" data-filter="weekly">Esta Semana</button>
+                            </div>
+                        </div>
+                        <div class="ranking-table">
+                            <div class="table-header">
+                                <span>Posição</span>
+                                <span>Jogador</span>
+                                <span>Pontuação</span>
+                                <span>Nível</span>
+                            </div>
+                            <div class="table-body" id="rankingTable">
+                                <!-- Ranking será carregado via JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Game Over Modal -->
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>FIM DE JOGO</h2>
+                <button class="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="game-result">
+                    <div class="result-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="result-score">
+                        <span class="score-label">Pontuação Final</span>
+                        <span class="score-value" id="finalScore">0</span>
+                    </div>
+                    <div class="result-message" id="resultMessage">
+                        Boa tentativa! Continue praticando!
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button id="restartBtn" class="btn btn-primary">
+                        <i class="fas fa-redo"></i>
+                        Jogar Novamente
+                    </button>
+                    <button class="btn btn-secondary" data-page="home">
+                        <i class="fas fa-home"></i>
+                        Voltar ao Início
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">CARREGANDO GALACTIC DEFENDER...</div>
+        </div>
+    </div>
+
+    <!-- Assistente Galáctico -->
+    <div id="assistant" class="assistant">
+        <div class="assistant-icon">
+            <i class="fas fa-robot"></i>
+        </div>
+        <div class="assistant-message" id="assistantMessage">
+            Bem-vindo, Defensor! Pronto para proteger a galáxia?
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
