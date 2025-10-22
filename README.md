@@ -9,9 +9,8 @@
 
 ###
 
-<a href="baixar.gif" target="_blank">
-  <img align="right" height="150" src="baixar.gif" alt="Meu GIF"  />
-</a>
+
+<img align="right" height="150" src="baixar.gif" alt="gif do pinterest" />
 
 ###
 
@@ -47,13 +46,13 @@
 
 ###
 
+<a href="https://www.instagram.com/rochwxs" target="_blank">
+  <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
+</a>
 
-  <a href="https://www.instagram.com/SEU_INSTAGRAM" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
-  </a>
-  <a href="https://discord.gg/SEU_DISCORD" target="_blank">
-    <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  />
-</div>
+<a href="https://discord.gg/snttoswx" target="_blank">
+  <img src="https://img.shields.io/static/v1?message=Discord&logo=discord&label=&color=7289DA&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="discord logo"  />
+</a>
 
 ###
 
